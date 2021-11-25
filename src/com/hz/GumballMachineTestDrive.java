@@ -7,32 +7,36 @@ public class GumballMachineTestDrive {
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.ejectQuarter();
-        gumballMachine.turnCrank();
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.ejectQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.ejectQuarter();
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
+        gumballMachine.state.ejectQuarter(gumballMachine, gumballMachine.count);
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
+        gumballMachine.refill(2);
+
+        System.out.println(gumballMachine);
+
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
+        gumballMachine.state.insertQuarter(gumballMachine, gumballMachine.count);
+        gumballMachine.state.turnCrank(gumballMachine, gumballMachine.count);
 
         System.out.println(gumballMachine);
     }
